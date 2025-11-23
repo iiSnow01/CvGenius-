@@ -1,0 +1,136 @@
+:root {
+  /* Brand Colors - Deep Professional Blue & Vibrant Accent */
+  --primary-hue: 220;
+  --primary-sat: 90%;
+  --primary-light: 55%;
+  
+  --accent-hue: 260; /* Purple/Indigo accent */
+  --accent-sat: 90%;
+  --accent-light: 60%;
+
+  --color-primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
+  --color-primary-dark: hsl(var(--primary-hue), var(--primary-sat), 30%);
+  --color-primary-light: hsl(var(--primary-hue), var(--primary-sat), 95%);
+  
+  --color-accent: hsl(var(--accent-hue), var(--accent-sat), var(--accent-light));
+  --color-accent-glow: hsl(var(--accent-hue), var(--accent-sat), 70%);
+
+  /* Neutral Colors */
+  --color-bg: hsl(220, 20%, 98%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-text: hsl(220, 40%, 10%);
+  --color-text-muted: hsl(220, 20%, 40%);
+  --color-border: hsl(220, 20%, 90%);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  --backdrop-blur: 12px;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', var(--font-sans);
+
+  /* Spacing & Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  
+  --container-width: 1200px;
+  --header-height: 4rem;
+}
+
+/* Dark Mode Support (Optional, but good to have ready) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: hsl(220, 30%, 8%);
+    --color-surface: hsl(220, 25%, 12%);
+    --color-text: hsl(220, 20%, 95%);
+    --color-text-muted: hsl(220, 15%, 70%);
+    --color-border: hsl(220, 20%, 20%);
+    
+    --glass-bg: rgba(18, 20, 30, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--backdrop-blur));
+  -webkit-backdrop-filter: blur(var(--backdrop-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-lg);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
