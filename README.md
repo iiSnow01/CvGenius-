@@ -10,7 +10,7 @@ A premium, React-based CV generator featuring a modern design system, real-time 
 - **LinkedIn Integration**: Simulate importing your profile data by pasting your LinkedIn URL.
 - **Real-time Editor**: Split-screen view with instant updates as you type.
 - **Multiple Templates**: Choose between "Modern" and "Creative" layouts.
-- **PDF Export**: High-quality export for printing or sharing.
+- **Print / Save as PDF**: Open the browser print dialog from the editor, then choose Save as PDF to export the active template.
 
 ## 🛠️ Tech Stack
 
