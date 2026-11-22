@@ -30,7 +30,7 @@ const Navbar = () => {
                     <Link to="/templates" style={{ textDecoration: 'none', color: 'var(--color-text)', fontWeight: '500' }}>Templates</Link>
                 </div>
 
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem' }}>
+                <a href="https://github.com/iiSnow01/CvGenius-" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem' }}>
                     <Github size={18} />
                     <span>Star on GitHub</span>
                 </a>
